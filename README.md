@@ -26,6 +26,8 @@ these trees.
 ### Knuth
 ![Knuth Algorithm Drawing](resources/knuth.gif)
 
+### Wetherell Shannon minimum tree
+![Wetherell Shannon](resources/ws_minimum.gif)
 
 [1]: http://llimllib.github.io/pymag-trees/
 [2]: https://github.com/llimllib/pymag-trees/

@@ -29,5 +29,8 @@
     <ClInclude Include="SimpleNode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Wetherell-Shannon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

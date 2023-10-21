@@ -153,6 +153,7 @@
     <ClInclude Include="DrawUtils.h" />
     <ClInclude Include="Knuth.h" />
     <ClInclude Include="SimpleNode.h" />
+    <ClInclude Include="Wetherell-Shannon.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

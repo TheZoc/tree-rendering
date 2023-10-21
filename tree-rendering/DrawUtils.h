@@ -51,11 +51,11 @@ Theme theme_dracula = {
 
 //////////////////////////////////////////////////////////////////////////
 
-constexpr unsigned int DIAMETER           = 30;
-constexpr unsigned int MARGIN_LEFT        = DIAMETER + 4;
-constexpr unsigned int MARGIN_TOP         = DIAMETER + 4;
-constexpr unsigned int SPACING_VERTICAL   = DIAMETER * 3;
-constexpr unsigned int SPACING_HORIZONTAL = DIAMETER * 3;
+constexpr unsigned int RADIUS             = 30;
+constexpr unsigned int MARGIN_LEFT        = RADIUS + 4;
+constexpr unsigned int MARGIN_TOP         = RADIUS + 4;
+constexpr unsigned int SPACING_VERTICAL   = RADIUS * 3;
+constexpr unsigned int SPACING_HORIZONTAL = RADIUS * 3;
 
 template <typename T>
 void DrawNodes(cimg_library::CImg<T>& img, Theme& current_theme, SimpleNode& node)
@@ -65,7 +65,7 @@ void DrawNodes(cimg_library::CImg<T>& img, Theme& current_theme, SimpleNode& nod
 	// Draw node
 	img.draw_circle(MARGIN_LEFT + node.x * SPACING_HORIZONTAL,
 					MARGIN_TOP + node.y * SPACING_VERTICAL,
-					DIAMETER,
+					RADIUS,
 					current_theme.node_color,
 					1);
 
