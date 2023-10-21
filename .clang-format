@@ -1,0 +1,10 @@
+AlignConsecutiveAssignments: 'true'
+AlignTrailingComments: 'true'
+BreakBeforeBraces: Allman
+ColumnLimit: '0'
+Cpp11BracedListStyle: 'false'
+IndentWidth: '4'
+PointerAlignment: Left
+SpacesBeforeTrailingComments: '1'
+TabWidth: '4'
+UseTab: ForContinuationAndIndentation
