@@ -18,11 +18,11 @@ SimpleNode test =
 				{
 					"left-right",
 					{
-						{ "LRR" },
+						{ "LRL" },
 						{
-							"LRL",
+							"LRR",
 							{
-								{ "LRLL" }
+								{ "LRRL" }
 							}
 						}
 					}
