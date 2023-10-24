@@ -1,7 +1,9 @@
 AlignConsecutiveAssignments: 'true'
 AlignTrailingComments: 'true'
 BreakBeforeBraces: Allman
+BreakConstructorInitializers: BeforeComma
 ColumnLimit: '0'
+ConstructorInitializerAllOnOneLineOrOnePerLine: 'false'
 Cpp11BracedListStyle: 'false'
 IndentWidth: '4'
 PointerAlignment: Left

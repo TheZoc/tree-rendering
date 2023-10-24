@@ -57,14 +57,14 @@ constexpr unsigned int MARGIN_TOP         = RADIUS + 4;
 constexpr unsigned int SPACING_VERTICAL   = RADIUS * 3;
 constexpr unsigned int SPACING_HORIZONTAL = RADIUS * 3;
 
-template <typename T>
-void DrawNodes(cimg_library::CImg<T>& img, Theme& current_theme, SimpleNode& node)
+template <typename T, typename NODE>
+void DrawNodes(cimg_library::CImg<T>& img, Theme& current_theme, NODE& node)
 {
 	using namespace cimg_library;
 
 	// Draw node
-	img.draw_circle(MARGIN_LEFT + node.x * SPACING_HORIZONTAL,
-					MARGIN_TOP + node.y * SPACING_VERTICAL,
+	img.draw_circle(static_cast<int>(MARGIN_LEFT + node.x * SPACING_HORIZONTAL),
+					static_cast<int>(MARGIN_TOP + node.y * SPACING_VERTICAL),
 					RADIUS,
 					current_theme.node_color,
 					1);
@@ -76,8 +76,8 @@ void DrawNodes(cimg_library::CImg<T>& img, Theme& current_theme, SimpleNode& nod
 	text_measuring.draw_text(0, 0, node.id.c_str(), &local_black, 0, 1, font_size);
 
 	// Draw text
-	img.draw_text(MARGIN_LEFT + node.x * SPACING_HORIZONTAL - text_measuring.width() / 2,
-				  MARGIN_TOP + node.y * SPACING_VERTICAL - text_measuring.height() / 2,
+	img.draw_text(static_cast<int>(MARGIN_LEFT + node.x * SPACING_HORIZONTAL - text_measuring.width() / 2.f),
+				  static_cast<int>(MARGIN_TOP + node.y * SPACING_VERTICAL - text_measuring.height() / 2.f),
 				  node.id.c_str(),
 				  current_theme.foreground, 0, 1, font_size);
 
@@ -87,18 +87,18 @@ void DrawNodes(cimg_library::CImg<T>& img, Theme& current_theme, SimpleNode& nod
 	}
 }
 
-template <typename T>
-void DrawConnections(cimg_library::CImg<T>& img, Theme& current_theme, SimpleNode& node)
+template <typename T, typename NODE>
+void DrawConnections(cimg_library::CImg<T>& img, Theme& current_theme, NODE& node)
 {
 	using namespace cimg_library;
 
 	// Draw connections to all children
 	for (auto& child : node.children)
 	{
-		img.draw_line(MARGIN_LEFT + node.x * SPACING_HORIZONTAL,
-					  MARGIN_TOP + node.y * SPACING_VERTICAL,
-					  MARGIN_LEFT + child.x * SPACING_HORIZONTAL,
-					  MARGIN_TOP + child.y * SPACING_VERTICAL,
+		img.draw_line(static_cast<int>(MARGIN_LEFT + node.x * SPACING_HORIZONTAL),
+					  static_cast<int>(MARGIN_TOP + node.y * SPACING_VERTICAL),
+					  static_cast<int>(MARGIN_LEFT + child.x * SPACING_HORIZONTAL),
+					  static_cast<int>(MARGIN_TOP + child.y * SPACING_VERTICAL),
 					  current_theme.accent,
 					  1,
 					  ~0U);
@@ -118,10 +118,10 @@ void DrawThreads(cimg_library::CImg<T>& img, Theme& current_theme, NODE& node)
 		if (child.thread)
 		{
 
-			img.draw_line(MARGIN_LEFT + child.x * SPACING_HORIZONTAL,
-						  MARGIN_TOP + child.y * SPACING_VERTICAL,
-						  MARGIN_LEFT + child.thread.x * SPACING_HORIZONTAL,
-						  MARGIN_TOP + child.thread.y * SPACING_VERTICAL,
+			img.draw_line(static_cast<int>(MARGIN_LEFT + child.x * SPACING_HORIZONTAL),
+						  static_cast<int>(MARGIN_TOP + child.y * SPACING_VERTICAL),
+						  static_cast<int>(MARGIN_LEFT + child.thread.x * SPACING_HORIZONTAL),
+						  static_cast<int>(MARGIN_TOP + child.thread.y * SPACING_VERTICAL),
 						  current_theme.thread_color,
 						  1,
 						  0xF0F0F0F0);
