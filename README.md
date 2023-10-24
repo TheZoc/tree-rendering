@@ -29,6 +29,9 @@ these trees.
 ### Wetherell Shannon minimum tree
 ![Wetherell Shannon](resources/ws_minimum.gif)
 
+### Wetherell Shannon tidy drawing
+![Wetherell Shannon tidy drawing](resources/ws2.gif)
+
 [1]: http://llimllib.github.io/pymag-trees/
 [2]: https://github.com/llimllib/pymag-trees/
 [3]: https://github.com/llimllib/pymag-trees/pull/10
