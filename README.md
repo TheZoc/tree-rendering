@@ -32,6 +32,10 @@ these trees.
 ### Wetherell Shannon tidy drawing
 ![Wetherell Shannon tidy drawing](resources/ws2.gif)
 
+### Buchheim tree layout
+![Buchheim tree layout](resources/buchheim.gif)
+
+
 [1]: http://llimllib.github.io/pymag-trees/
 [2]: https://github.com/llimllib/pymag-trees/
 [3]: https://github.com/llimllib/pymag-trees/pull/10

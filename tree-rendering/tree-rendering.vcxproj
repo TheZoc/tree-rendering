@@ -147,9 +147,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Buchheim.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Buchheim.h" />
     <ClInclude Include="DrawUtils.h" />
     <ClInclude Include="Knuth.h" />
     <ClInclude Include="SimpleNode.h" />

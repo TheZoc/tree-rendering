@@ -120,14 +120,14 @@ void DrawThreads(cimg_library::CImg<T>& img, Theme& current_theme, NODE& node)
 
 			img.draw_line(static_cast<int>(MARGIN_LEFT + child.x * SPACING_HORIZONTAL),
 						  static_cast<int>(MARGIN_TOP + child.y * SPACING_VERTICAL),
-						  static_cast<int>(MARGIN_LEFT + child.thread.x * SPACING_HORIZONTAL),
-						  static_cast<int>(MARGIN_TOP + child.thread.y * SPACING_VERTICAL),
+						  static_cast<int>(MARGIN_LEFT + child.thread->x * SPACING_HORIZONTAL),
+						  static_cast<int>(MARGIN_TOP + child.thread->y * SPACING_VERTICAL),
 						  current_theme.thread_color,
 						  1,
 						  0xF0F0F0F0);
 		}
 
-		DrawConnections(img, current_theme, child);
+		DrawThreads(img, current_theme, child);
 	}
 }
 
